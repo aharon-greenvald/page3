@@ -1,2 +1,74 @@
-<h1>Team1</h1>
+
+
+
+<div class="ng">
+
+  <ul *ngFor="let player of names">
+    <span><button (click)="addPlayer(player)">{{player.name}}</button></span>
+  </ul>
+</div>
+
+  <div class="game" >
+    
+    <table>
+    <span>{{team1name}}</span>
+      <tr>
+        <th>Name</th>
+        <th>Made</th>
+        <th>missed</th>
+        <th>points</th>
+        <th>percentage</th>
+      </tr>
+      <tr *ngFor="let player of team1">
+        <td>{{player.name}}</td>
+        <td><button (click)="madeBtn(player)">{{player.made}}</button></td>
+        <td><button (click)="missedBtn(player)">{{player.missed}}</button></td>
+        <td>{{player.points}}</td>
+        <td>{{player.percentage}}</td>
+        
+      </tr>
+    </table>
+
+    <h1>vs</h1>
+    <table>
+      <span>{{team2name}}</span>
+      
+      <tr>
+        <th>Name</th>
+        <th>Made</th>
+        <th>missed</th>
+        <th>points</th>
+        <th>percentage</th>
+
+      </tr>
+      <tr *ngFor="let player of team2">
+        <td>{{player.name}}</td>
+        <td><button (click)="madeBtn(player)">{{player.made}}</button></td>
+        <td><button (click)="missedBtn(player)">{{player.missed}}</button></td>
+        <td>{{player.points}}</td>
+        <td>{{player.percentage}}</td>
+
+
+
+      </tr>
+      
+      
+    </table>
+    
+  </div>
+  <div class="t1">
+
+    <h1> sumTeamMade:{{sumTeam1Made}}</h1>
+    <h1>sumTeamMissed:{{sumTeam1Missed}}</h1>
+    <h1>sumAll:{{sum1All}}</h1>
+    <h1>sumTeamPrec:  {{sumTeam1Prec}}%</h1>
+  </div>
+  <div class="t2">
+
+    <h1> sumTeamMade:{{sumTeam2Made}}</h1>
+    <h1>sumTeamMissed:{{sumTeam2Missed}}</h1>
+    <h1>sumAll:{{sum2All}}</h1>
+    <h1>sumTeamPrec:  {{sumTeam2Prec}}%</h1>
+  </div>
+
 <router-outlet></router-outlet>

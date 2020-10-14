@@ -1,0 +1,31 @@
+.ng{
+  display: flex;
+}
+ul{
+  
+  margin: 34px;
+}
+
+
+table, th, td {
+    border: 1px solid black;
+    background-color: aqua;
+  }
+
+  .game{
+    background: burlywood;
+    display: flex;
+    /* margin: 2px; */
+  }
+  .teamsname{
+    background-color: aqua;
+  }
+
+  .t1{
+background-color: blueviolet;
+  }
+
+  .t2{
+    background-color: rgb(226, 43, 43);
+
+  }
